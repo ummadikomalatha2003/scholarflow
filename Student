@@ -1,0 +1,46 @@
+{
+  "name": "Student",
+  "type": "object",
+  "properties": {
+    "student_id": {
+      "type": "string",
+      "description": "Unique student identifier (e.g. STU-001)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Full name of the student"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Student email address"
+    },
+    "course": {
+      "type": "string",
+      "enum": [
+        "Computer Science",
+        "Mathematics",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Engineering",
+        "Business",
+        "Arts",
+        "Medicine",
+        "Law"
+      ],
+      "description": "Enrolled course"
+    },
+    "age": {
+      "type": "number",
+      "description": "Age of the student"
+    }
+  },
+  "required": [
+    "student_id",
+    "name",
+    "email",
+    "course",
+    "age"
+  ]
+}
